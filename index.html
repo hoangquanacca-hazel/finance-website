@@ -1,588 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Aegis Wealth Management | Precision in Finance. Strategy for Growth.</title>
-    <meta name="description" content="Aegis Wealth Management provides institutional-grade financial planning, investment strategy, and tax optimization for high-net-worth individuals and growth enterprises.">
-    <meta name="keywords" content="financial planning, investment strategy, wealth management, tax planning, cashflow optimization, corporate finance">
-    <meta name="author" content="Aegis Wealth Management">
-    <meta name="robots" content="index, follow">
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Aegis Wealth Management | Precision in Finance.">
-    <meta property="og:description" content="Helping individuals and businesses make smarter financial decisions with data-driven insights and rigorous risk management.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://www.aegiswealth.com">
-    <meta property="og:site_name" content="Aegis Wealth">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aegis Wealth Management">
-    <meta name="twitter:description" content="Helping individuals and businesses make smarter financial decisions with data-driven insights.">
-
-    <!-- Favicon Placeholder -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
-
-    <!-- Tailwind CSS & Google Fonts -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Savafinlab | Tư vấn Tài chính, Thuế & Kế toán Doanh nghiệp SMEs</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Lucide Icons (Cdn for production) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Tailwind Configuration for Dark Mode & Theme Expansion -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        navy: {
-                            50: '#f0f4f8',
-                            900: '#0f172a',
-                            950: '#020617',
-                        },
-                        gold: {
-                            500: '#d4af37',
-                            600: '#b8962e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-white text-slate-800 dark:bg-navy-950 dark:text-slate-200 transition-colors duration-300">
+<body class="bg-[#0A1128] text-gray-100 antialiased selection:bg-[#D4AF37] selection:text-[#0A1128]">
 
-    <!-- 1. HEADER SECTION -->
-    <header id="main-header" class="fixed top-0 w-full z-50 bg-white/90 dark:bg-navy-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center space-x-2 font-bold text-xl tracking-tight text-navy-900 dark:text-white">
-                <i data-lucide="shield" class="w-8 h-8 text-gold-500"></i>
-                <span>AEGIS<span class="text-gold-500 font-light">WEALTH</span></span>
+    <nav class="sticky top-0 z-50 bg-[#0A1128]/90 backdrop-blur-md border-b border-gray-800/60 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-wider bg-gradient-to-r from-white via-gray-200 to-[#D4AF37] bg-clip-text text-transparent">SAVAFINLAB</span>
             </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="index.html" class="text-[#D4AF37] transition-colors">Trang chủ</a>
+                <a href="#services" class="text-gray-400 hover:text-white transition-colors">Dịch vụ B2B</a>
+                <a href="cpa-hub.html" class="text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+                    CPA Hub & Tri Thức 
+                    <span class="bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] px-1.5 py-0.5 rounded font-bold">Bổ trợ</span>
+                </a>
+                <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Liên hệ</a>
+            </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8 font-medium text-sm">
-                <a href="#home" class="hover:text-gold-500 transition-colors">Home</a>
-                <a href="#about" class="hover:text-gold-500 transition-colors">About</a>
-                <a href="#services" class="hover:text-gold-500 transition-colors">Services</a>
-                <a href="#insights" class="hover:text-gold-500 transition-colors">Insights</a>
-                <a href="#contact" class="hover:text-gold-500 transition-colors">Contact</a>
-            </nav>
-
-            <!-- Actions -->
-            <div class="hidden md:flex items-center space-x-4">
-                <!-- Dark Mode Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400" aria-label="Toggle Dark Mode">
-                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
-                </button>
-                <a href="#contact" class="bg-navy-900 text-white dark:bg-white dark:text-navy-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-gold-500 dark:hover:bg-gold-500 dark:hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm">
-                    Book Consultation
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2 text-xs font-semibold tracking-wider border border-gray-800 rounded-full px-3 py-1.5 bg-[#111C44]">
+                    <span class="text-[#D4AF37]">VI</span>
+                    <span class="text-gray-600">|</span>
+                    <a href="en/index.html" class="text-gray-400 hover:text-white transition-colors">EN</a>
+                </div>
+                <a href="#contact" class="hidden sm:inline-flex bg-[#D4AF37] hover:bg-[#C19A28] text-[#0A1128] text-xs font-bold tracking-wider uppercase px-5 py-2.5 rounded shadow-lg shadow-[#D4AF37]/10 transition-all transform hover:-translate-y-0.5">
+                    Tư vấn ngay
                 </a>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="flex items-center space-x-4 md:hidden">
-                <button id="theme-toggle-mobile" class="p-2 rounded-full text-slate-500 dark:text-slate-400" aria-label="Toggle Dark Mode">
-                    <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
-                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-                </button>
-                <button id="menu-btn" class="text-navy-900 dark:text-white" aria-label="Toggle Menu">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
         </div>
+    </nav>
 
-        <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-white dark:bg-navy-950 z-40 border-t border-slate-200 dark:border-slate-800 px-4 py-6 space-y-4">
-            <a href="#home" class="block text-lg font-medium py-2 border-b border-slate-100 dark:border-slate-900">Home</a>
-            <a href="#about" class="block text-lg font-medium py-2 border-b border-slate-100 dark:border-slate-900">About</a>
-            <a href="#services" class="block text-lg font-medium py-2 border-b border-slate-100 dark:border-slate-900">Services</a>
-            <a href="#insights" class="block text-lg font-medium py-2 border-b border-slate-100 dark:border-slate-900">Insights</a>
-            <a href="#contact" class="block text-lg font-medium py-2 border-b border-slate-100 dark:border-slate-900">Contact</a>
-            <a href="#contact" class="block w-full text-center bg-navy-900 text-white dark:bg-white dark:text-navy-900 py-3 rounded-lg font-semibold">Book Consultation</a>
+    <header class="relative overflow-hidden py-24 lg:py-32 border-b border-gray-900">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.05),transparent_45%)]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-[#111C44] border border-gray-800 rounded-full px-4 py-1.5 text-xs text-[#D4AF37] font-medium tracking-wide">
+                    <span>✦ Tiêu chuẩn tư vấn quốc tế cho doanh nghiệp Việt</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-white">
+                    Bảo vệ dòng vốn & <br>
+                    <span class="bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] bg-clip-text text-transparent">Tối ưu cấu trúc Thuế</span>
+                </h1>
+                <p class="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Savafinlab cung cấp giải pháp cố vấn tài chính chuyên sâu, thiết lập hệ thống kiểm soát và minh bạch hóa kế toán dành riêng cho cấu trúc HKD và doanh nghiệp SMEs.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-6 py-3 rounded text-center transition-colors">
+                        Khám phá dịch vụ
+                    </a>
+                    <a href="cpa-hub.html" class="border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#D4AF37] font-medium px-6 py-3 rounded text-center transition-colors">
+                        Vào Góc Tri Thức CPA
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                <div class="bg-[#111C44]/40 border border-gray-800/80 p-6 rounded-lg backdrop-blur">
+                    <div class="text-3xl font-bold text-white mb-1">SMEs</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider font-medium">Trọng tâm phục vụ</div>
+                </div>
+                <div class="bg-[#111C44]/40 border border-gray-800/80 p-6 rounded-lg backdrop-blur">
+                    <div class="text-3xl font-bold text-[#D4AF37] mb-1">100%</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider font-medium">Bảo mật dữ liệu</div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- 2. HERO SECTION -->
-    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white dark:from-navy-900 dark:to-navy-950">
-        <!-- Abstract Tech Background Graph Pattern -->
-        <div class="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none mix-blend-overlay">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
+    <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Hệ sinh thái giải pháp cốt lõi</h2>
+            <p class="text-gray-400">Đóng gói chuẩn chỉnh theo nhu cầu thực tế của cấu trúc doanh nghiệp vừa và nhỏ tại Việt Nam.</p>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 text-center md:text-left">
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gold-500/10 text-gold-600 dark:text-gold-500">
-                        Institutional Wealth Advisory
-                    </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
-                        Precision in Finance.<br><span class="text-gold-500">Strategy for Growth.</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto md:mx-0">
-                        Helping institutional investors, family offices, and growth enterprises scale capital safely with rigorous asset liability matching and risk management systems.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
-                        <a href="#contact" class="w-full sm:w-auto text-center bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 px-8 py-3.5 rounded-lg font-semibold hover:bg-gold-500 dark:hover:bg-gold-600 dark:hover:text-white transition-all transform hover:-translate-y-0.5 shadow-lg">
-                            Book a Call
-                        </a>
-                        <a href="#services" class="w-full sm:w-auto text-center border border-slate-300 dark:border-slate-700 px-8 py-3.5 rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
-                            Explore Services
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Financial Hero Illustration Frame -->
-                <div class="relative hidden md:block">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/20 to-transparent rounded-2xl blur-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Executive consulting professional environment" class="rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 object-cover w-full h-[450px]">
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-[#111C44]/30 border border-gray-800/60 p-8 rounded-xl hover:border-[#D4AF37]/30 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-xl font-bold mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0A1128] transition-colors">01</div>
+                <h3 class="text-xl font-semibold text-white mb-3">Tư vấn Tài chính Doanh nghiệp (SMEs)</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Tái cấu trúc dòng vốn, lập mô hình dự báo tài chính ngắn và trung hạn, tối ưu hóa hiệu suất sử dụng vốn và giảm thiểu chi phí kéo ròng (Cash Drag).</p>
+            </div>
+            <div class="bg-[#111C44]/30 border border-gray-800/60 p-8 rounded-xl hover:border-[#D4AF37]/30 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-xl font-bold mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0A1128] transition-colors">02</div>
+                <h3 class="text-xl font-semibold text-white mb-3">Dịch vụ Kế toán Doanh nghiệp trọn gói</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Vận hành và chuẩn hóa toàn bộ hệ thống sổ sách kế toán, lập báo cáo tài chính định kỳ chuẩn mực, xử lý hồ sơ minh bạch phục vụ công tác thanh kiểm tra.</p>
+            </div>
+            <div class="bg-[#111C44]/30 border border-gray-800/60 p-8 rounded-xl hover:border-[#D4AF37]/30 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-xl font-bold mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0A1128] transition-colors">03</div>
+                <h3 class="text-xl font-semibold text-white mb-3">Tư vấn Thuế chuyên sâu cho HKD & SMEs</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Hoạch định chiến lược nghĩa vụ thuế tối ưu, rà soát rủi ro quyết toán thuế, cập nhật chính sách mới áp dụng riêng cho mô hình Hộ kinh doanh lớn và SMEs.</p>
+            </div>
+            <div class="bg-[#111C44]/30 border border-gray-800/60 p-8 rounded-xl hover:border-[#D4AF37]/30 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-xl font-bold mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0A1128] transition-colors">04</div>
+                <h3 class="text-xl font-semibold text-white mb-3">Tư vấn Quản trị & Kiểm soát nội bộ</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Thiết lập ma trận phân quyền, quy trình kiểm soát thất thoát dòng tiền, hỗ trợ xây dựng năng lực quản trị rủi ro hệ thống cốt lõi cho ban điều hành.</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. VALUE PROPOSITION -->
-    <section class="py-16 bg-white dark:bg-navy-950 border-y border-slate-100 dark:border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Prop 1 -->
-                <div class="flex space-x-4 items-start">
-                    <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-gold-500 shrink-0">
-                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg mb-1">Data-Driven Analysis</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Quantitative models that strip emotion away from macroeconomic volatility mapping.</p>
-                    </div>
-                </div>
-                <!-- Prop 2 -->
-                <div class="flex space-x-4 items-start">
-                    <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-gold-500 shrink-0">
-                        <i data-lucide="sliders" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg mb-1">Personalized Strategy</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Bespoke investment strategies dynamic enough to match shifting capital goals.</p>
-                    </div>
-                </div>
-                <!-- Prop 3 -->
-                <div class="flex space-x-4 items-start">
-                    <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-gold-500 shrink-0">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg mb-1">Risk-Managed Growth</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Tail-risk protection design implemented structurally within every custom portfolio.</p>
-                    </div>
-                </div>
-                <!-- Prop 4 -->
-                <div class="flex space-x-4 items-start">
-                    <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-gold-500 shrink-0">
-                        <i data-lucide="eye" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-lg mb-1">Transparent Advisory</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Pure fiduciary alignment with transparent, straight fee schedules and zero hidden trailing commissions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. SERVICES SECTION -->
-    <section id="services" class="py-20 md:py-28 bg-slate-50 dark:bg-navy-900/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Core Competencies & Services</h2>
-                <p class="text-slate-600 dark:text-slate-400">Engineered allocation methods optimizing fiscal resilience, asset liquidation cycles, and global regulatory efficiency.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white dark:bg-navy-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-navy-900 dark:text-white inline-block mb-6 group-hover:bg-gold-500 group-hover:text-white transition-colors">
-                            <i data-lucide="line-chart" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Comprehensive Financial Planning</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Structural asset allocation modeling built specifically around future liability matching and intergenerational transfer requirements.</p>
-                    </div>
-                    <a href="#contact" class="text-sm font-semibold text-gold-600 dark:text-gold-500 flex items-center space-x-1 hover:underline">
-                        <span>Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-white dark:bg-navy-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-navy-900 dark:text-white inline-block mb-6 group-hover:bg-gold-500 group-hover:text-white transition-colors">
-                            <i data-lucide="trending-up" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Institutional Investment Strategy</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Multi-asset portfolio construction incorporating liquid alternatives, private equities, and real asset macro protection models.</p>
-                    </div>
-                    <a href="#contact" class="text-sm font-semibold text-gold-600 dark:text-gold-500 flex items-center space-x-1 hover:underline">
-                        <span>Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-white dark:bg-navy-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-navy-900 dark:text-white inline-block mb-6 group-hover:bg-gold-500 group-hover:text-white transition-colors">
-                            <i data-lucide="briefcase" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Business Finance Advisory</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Strategic capital restructuring options, M&A process navigation assistance, and structured corporate debt capital market advisory.</p>
-                    </div>
-                    <a href="#contact" class="text-sm font-semibold text-gold-600 dark:text-gold-500 flex items-center space-x-1 hover:underline">
-                        <span>Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-white dark:bg-navy-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-navy-900 dark:text-white inline-block mb-6 group-hover:bg-gold-500 group-hover:text-white transition-colors">
-                            <i data-lucide="activity" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Cashflow Optimization</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Deep Treasury working capital cycle enhancements minimizing negative cash drag while maximizing operational buffer liquidity.</p>
-                    </div>
-                    <a href="#contact" class="text-sm font-semibold text-gold-600 dark:text-gold-500 flex items-center space-x-1 hover:underline">
-                        <span>Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="bg-white dark:bg-navy-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-navy-900 dark:text-white inline-block mb-6 group-hover:bg-gold-500 group-hover:text-white transition-colors">
-                            <i data-lucide="pie-chart" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Cross-Border Tax Planning</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Corporate structural alignment strategies built to legally protect revenue across multijurisdictional tax boundaries.</p>
-                    </div>
-                    <a href="#contact" class="text-sm font-semibold text-gold-600 dark:text-gold-500 flex items-center space-x-1 hover:underline">
-                        <span>Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="bg-white dark:bg-navy-950 p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 text-navy-900 dark:text-white inline-block mb-6 group-hover:bg-gold-500 group-hover:text-white transition-colors">
-                            <i data-lucide="layers" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Independent Portfolio Review</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Unbiased stress-testing auditing hidden fund fees, internal style drift, and systemic counterparty risk factors.</p>
-                    </div>
-                    <a href="#contact" class="text-sm font-semibold text-gold-600 dark:text-gold-500 flex items-center space-x-1 hover:underline">
-                        <span>Learn More</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. ABOUT SECTION -->
-    <section id="about" class="py-20 md:py-28 bg-white dark:bg-navy-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative order-2 md:order-1">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Managing Director Portrait" class="rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 h-[500px] w-full object-cover">
-                    <!-- Security Signal Overlay Card -->
-                    <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-xl hidden lg:block border border-slate-800 max-w-xs shadow-2xl">
-                        <p class="text-xs text-gold-500 uppercase tracking-widest font-semibold mb-1">Fiduciary Guarantee</p>
-                        <p class="text-sm font-light text-slate-300">100% bound to act strictly in our client's best financial interest at all times.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-6 order-1 md:order-2">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Your Partner in Sustainable Financial Growth</h2>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Aegis Wealth Management was founded to challenge the traditional commission-driven investment model. We believe long-term alpha is generated through patient, calculated cross-asset execution and absolute transparency. 
-                    </p>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Today, we steward private wealth and corporate assets with an unyielding commitment to proprietary quantitative analysis, protecting downside risk while safely engineering compound structural expansions.
-                    </p>
-
-                    <!-- Animated Stats Grid Component -->
-                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-100 dark:border-slate-900">
-                        <div>
-                            <span class="block text-3xl font-bold text-navy-900 dark:text-white" id="stat-years">18</span>
-                            <span class="text-xs text-slate-500 dark:text-slate-400">Years Active Experience</span>
-                        </div>
-                        <div>
-                            <span class="block text-3xl font-bold text-navy-900 dark:text-white" id="stat-clients">450</span>
-                            <span class="text-xs text-slate-500 dark:text-slate-400">HNW Clients Served</span>
-                        </div>
-                        <div>
-                            <span class="block text-3xl font-bold text-navy-900 dark:text-white" id="stat-assets">$1.2B</span>
-                            <span class="text-xs text-slate-500 dark:text-slate-400">Assets Under Advisory</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. INSIGHTS / BLOG SECTION (With Lead Magnet integration) -->
-    <section id="insights" class="py-20 md:py-28 bg-slate-50 dark:bg-navy-900/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
-                <div class="max-w-2xl space-y-4">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Market Intelligence & Insights</h2>
-                    <p class="text-slate-600 dark:text-slate-400">Macro trends deciphered by senior risk strategists, focusing on real long-term fundamental developments.</p>
-                </div>
-                <div class="bg-white dark:bg-navy-950 p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center space-x-3 shadow-sm w-full md:w-auto">
-                    <i data-lucide="download" class="w-5 h-5 text-gold-500 shrink-0"></i>
-                    <div class="text-sm">
-                        <p class="font-semibold text-xs text-slate-400 uppercase tracking-wider">Free Macro Download</p>
-                        <a href="#contact" class="font-bold text-navy-900 dark:text-white hover:underline">Get Q2 Global Allocations Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <article class="bg-white dark:bg-navy-950 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 group hover:shadow-xl transition-all">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80" alt="Trading screens showing charts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-4 left-4 bg-navy-900 text-white text-xs px-2.5 py-1 rounded font-medium">Macro Economics</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <time class="text-xs text-slate-400" datetime="2026-05-15">May 15, 2026</time>
-                        <h3 class="text-xl font-bold line-clamp-2 group-hover:text-gold-500 transition-colors">Yield Curve Normalization Strategies for Family Offices</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Analyzing adjustments for portfolio durations as central banking frameworks transition back toward historical interest baselines.</p>
-                        <a href="#contact" class="inline-flex items-center space-x-1 text-sm font-semibold text-navy-900 dark:text-white pt-2 group-hover:text-gold-500">
-                            <span>Read Full Insight</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="bg-white dark:bg-navy-950 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 group hover:shadow-xl transition-all">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Financial analytics dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-4 left-4 bg-navy-900 text-white text-xs px-2.5 py-1 rounded font-medium">Portfolio Defense</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <time class="text-xs text-slate-400" datetime="2026-04-28">April 28, 2026</time>
-                        <h3 class="text-xl font-bold line-clamp-2 group-hover:text-gold-500 transition-colors">Hedging De-dollarization Risks in Global Logistics Portfolios</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">How multinational asset configurations are shifting raw settlement exposures using structural hard commodities baskets.</p>
-                        <a href="#contact" class="inline-flex items-center space-x-1 text-sm font-semibold text-navy-900 dark:text-white pt-2 group-hover:text-gold-500">
-                            <span>Read Full Insight</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="bg-white dark:bg-navy-950 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 group hover:shadow-xl transition-all">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Corporate taxation filings documents" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-4 left-4 bg-navy-900 text-white text-xs px-2.5 py-1 rounded font-medium">Tax Law</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <time class="text-xs text-slate-400" datetime="2026-04-12">April 12, 2026</time>
-                        <h3 class="text-xl font-bold line-clamp-2 group-hover:text-gold-500 transition-colors">New Global Corporate Minimum Tax Protocols Unpacked</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Steps corporate enterprise structures must take immediately to offset double taxation under modified jurisdictional reporting codes.</p>
-                        <a href="#contact" class="inline-flex items-center space-x-1 text-sm font-semibold text-navy-900 dark:text-white pt-2 group-hover:text-gold-500">
-                            <span>Read Full Insight</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. TESTIMONIALS SECTION -->
-    <section class="py-20 md:py-28 bg-white dark:bg-navy-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Validated Fiduciary Success</h2>
-                <p class="text-slate-600 dark:text-slate-400 mt-2">Read direct case reflections from the corporate partners and private family offices we defend.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-xl border border-slate-100 dark:border-slate-800 space-y-6">
-                    <div class="flex text-gold-500">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    <blockquote class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed font-light">
-                        "The independent portfolio stress-testing audit executed by Aegis exposed deep systematic cost overhead structures that saved our organization millions in unnecessary management fees."
-                    </blockquote>
-                    <div class="border-t border-slate-200 dark:border-slate-800 pt-4">
-                        <p class="font-bold text-sm">Marcus Vance</p>
-                        <p class="text-xs text-slate-400">Chief Investment Officer, Vanguard Logistics Corp</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-xl border border-slate-100 dark:border-slate-800 space-y-6">
-                    <div class="flex text-gold-500">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    <blockquote class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed font-light">
-                        "Aegis rearranged our intergenerational trust asset allocations just ahead of major global corporate minimum tax modifications. Exceptional cross-border execution intelligence."
-                    </blockquote>
-                    <div class="border-t border-slate-200 dark:border-slate-800 pt-4">
-                        <p class="font-bold text-sm">Elena Rostova</p>
-                        <p class="text-xs text-slate-400">Managing Director, Rostova Family Office</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-xl border border-slate-100 dark:border-slate-800 space-y-6">
-                    <div class="flex text-gold-500">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    <blockquote class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed font-light">
-                        "Their corporate cashflow optimization protocol radically enhanced our group treasury efficiency. They fixed working capital drag we didn't even notice was hurting us."
-                    </blockquote>
-                    <div class="border-t border-slate-200 dark:border-slate-800 pt-4">
-                        <p class="font-bold text-sm">Devon Harris</p>
-                        <p class="text-xs text-slate-400">VP of Finance, Apex Global Technologies</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. CTA SECTION / 10. CONTACT FORM -->
-    <section id="contact" class="py-20 bg-navy-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5 pointer-events-none">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50%" cy="50%" r="40%" stroke="white" stroke-width="2" fill="none"/>
-                <circle cx="50%" cy="50%" r="60%" stroke="white" stroke-width="1" fill="none"/>
-            </svg>
-        </div>
-
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
-            <div class="space-y-3">
-                <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Ready to Optimize Your Financial Future?</h2>
-                <p class="text-slate-400 max-w-xl mx-auto text-base">Schedule a confidential strategic advisory call with a senior fiduciary advisor. No commitments required.</p>
-            </div>
-
-            <!-- Fully Functional Lead Intake Form Component -->
-            <form id="lead-form" class="bg-white dark:bg-navy-950 text-slate-900 dark:text-white p-8 rounded-xl shadow-2xl text-left max-w-xl mx-auto border border-slate-200 dark:border-slate-800 space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1" for="name">Full Name</label>
-                        <input type="text" id="name" required class="w-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-2.5 rounded-lg text-sm focus:outline-none focus:border-gold-500 dark:text-white">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1" for="email">Corporate Email</label>
-                        <input type="email" id="email" required class="w-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-2.5 rounded-lg text-sm focus:outline-none focus:border-gold-500 dark:text-white">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1" for="service-select">Requested Advisory Focus</label>
-                    <select id="service-select" class="w-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-2.5 rounded-lg text-sm focus:outline-none focus:border-gold-500 dark:text-white">
-                        <option>Asset Allocation Management</option>
-                        <option>Business Capital Advisory</option>
-                        <option>Tax Strategy Optimization</option>
-                        <option>Comprehensive Asset Audit</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 py-3 rounded-lg font-bold text-sm tracking-wide hover:bg-gold-500 dark:hover:bg-gold-600 dark:hover:text-white transition-colors">
-                    Request Secure Consultation Call
-                </button>
-                <p class="text-[11px] text-slate-400 text-center flex items-center justify-center space-x-1">
-                    <i data-lucide="lock" class="w-3 h-3"></i> <span>Data protected under 256-bit bank-grade encryption protocols.</span>
-                </p>
-            </form>
-        </div>
-    </section>
-
-    <!-- 9. FOOTER & LEGAL DISCLAIMER SECTION -->
-    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-12">
-            <div class="space-y-4">
-                <a href="#" class="flex items-center space-x-2 font-bold text-xl tracking-tight text-white">
-                    <i data-lucide="shield" class="w-6 h-6 text-gold-500"></i>
-                    <span>AEGIS<span class="text-gold-500 font-light">WEALTH</span></span>
-                </a>
-                <p class="text-sm font-light">Fiduciary global investment management and quantitative advisory structures servicing sovereign systems, enterprises, and family private offices.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Quick Navigation</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#home" class="hover:text-white transition-colors">Home Base</a></li>
-                    <li><a href="#about" class="hover:text-white transition-colors">Fiduciary Firm</a></li>
-                    <li><a href="#services" class="hover:text-white transition-colors">Service Suite</a></li>
-                    <li><a href="#insights" class="hover:text-white transition-colors">Market Intelligence</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Secure Contact Info</h4>
-                <ul class="space-y-2 text-sm">
-                    <li class="flex items-center space-x-2"><i data-lucide="mail" class="w-4 h-4 text-gold-500"></i> <span>advisory@aegiswealth.com</span></li>
-                    <li class="flex items-center space-x-2"><i data-lucide="phone" class="w-4 h-4 text-gold-500"></i> <span>+1 (800) 555-0199</span></li>
-                    <li class="flex items-center space-x-2"><i data-lucide="map-pin" class="w-4 h-4 text-gold-500"></i> <span>Wall Street, Suite 4800, NY</span></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Global Network Connect</h4>
-                <div class="flex space-x-4 mb-4">
-                    <a href="#" class="p-2 rounded bg-slate-800 text-slate-400 hover:text-white hover:bg-gold-500 transition-all" aria-label="LinkedIn Profile"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                    <a href="#" class="p-2 rounded bg-slate-800 text-slate-400 hover:text-white hover:bg-gold-500 transition-all" aria-label="Twitter Profile"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                    <a href="#" class="p-2 rounded bg-slate-800 text-slate-400 hover:text-white hover:bg-gold-500 transition-all" aria-label="Global Network"><i data-lucide="globe" class="w-4 h-4"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mandatory International Finance Legal Footer -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800 text-xs font-light text-slate-500 space-y-4">
-            <p class="leading-relaxed">
-                <strong>Regulatory Disclosure:</strong> Aegis Wealth Management is an SEC-registered investment advisor. Advisory services are only offered to clients or prospective clients where Aegis and its representatives are properly licensed or exempt from licensure. Past performance is no absolute guarantee of future financial results. Every asset instrument class involves material systemic risk, including the possible structural loss of principal capital values. 
+    <section id="contact" class="bg-[#111C44]/20 border-t border-b border-gray-900 py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+            <h2 class="text-3xl font-bold text-white">Khởi động cuộc họp cố vấn mật 15 phút</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
+                Cuộc gọi mang tính chất phân tích số liệu định lượng thuần túy, tuân thủ nghiêm ngặt tiêu chuẩn bảo mật thông tin và hoàn toàn miễn phí cam kết thương mại.
             </p>
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] pt-2">
-                <p>&copy; 2026 Aegis Wealth Management LLC. All international rights reserved securely.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:underline">Privacy Operational Policy</a>
-                    <a href="#" class="hover:underline">Terms of Service Alignment</a>
-                    <a href="#" class="hover:underline">ADV Part 2A Filings</a>
-                </div>
+            <div class="pt-4">
+                <a href="https://tally.so" target="_blank" class="bg-[#D4AF37] hover:bg-[#C19A28] text-[#0A1128] font-bold tracking-wider uppercase px-8 py-4 rounded-md shadow-xl shadow-[#D4AF37]/5 inline-flex items-center space-x-3 transition-all">
+                    <span>ĐĂNG KÝ XẾP LỊCH HẸN TỰ ĐỘNG</span>
+                </a>
             </div>
         </div>
+    </section>
+
+    <footer class="py-12 max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 border-t border-gray-900/40">
+        <div>&copy; 2026 Savafinlab. All rights reserved.</div>
+        <div class="mt-4 sm:mt-0 italic">Tuyên bố miễn trừ: Nội dung thuộc bản quyền nghiên cứu của Savafinlab, mang tính chất chia sẻ tri thức và không cấu thành lời khuyên đầu tư hay cam kết dịch vụ cá nhân.</div>
     </footer>
 
-    <!-- Core App Logic -->
-    <script src="assets/js/app.js"></script>
 </body>
 </html>
